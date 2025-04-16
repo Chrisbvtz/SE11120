@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Cartoon-Font";
+    src: url(../fonts/oldies_cartoon.ttf);
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(orange(255,94,0) 25%, yellow
+    );
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+#main{
+    border: 1px solid black; 
+    width: 1000px;
+    height: 800px;
+    background-color: rgb(225, 115,0);
+    /*margin:0 auto 0 auto; */
+}
+#header{
+    height:130px;
+    text-align: center;
+    line-height: 130px;
+}
+#header, 
+h1{
+    font-family: "cartoon-Font";
+    margin: 0;
+    font-size: 80px;
+}
+nav{
+    font-family: "Carter One", system-ui;
+    height: 100px;
+    background-color: yellow;
+    line-height: 100px;
+    border-top: 1px;
+
+}
+#content{
+    font-family: "Carter One", system-ui;
+    height: 470px;
+    width: 650px;
+    text-align: center;
+    float: left;
+}
+#sidebar{
+    font-family: "Carter One", system-ui;
+    height: 450px;
+    width: 349px;
+    border-left: 1px solid black;
+    float: left;
+}
+#footer{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+#footer, p{
+    font-family: "Carter One", system-ui;
+    clear: both;
+    margin: 0;
+}
+.side-btn:link{
+    color:black;
+    text-decoration: none;
+}
+.side-btn:hover{
+    color:brown;
+    background-color: gray;
+    text-decoration: none;
+}
+.side-btn:visited{
+    color: black;
+    text-decoration: none;
+}
