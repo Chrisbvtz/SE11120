@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content="width = device-width, initial - scale =1.0">
+    <title>Week 6 key logs and Forms</title>
+    <style>
+        table,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Week 6 Keyboard Events and Forms</h1>
+    <input type="text" id="name">
+    <script>
+        var textInput = document.querySelector("#name");
+        textInput.addEventListener("keyup", function(event){
+            console.log(event.key)
+            event.target.value = "No you can't type!"
+        })
+    </script>
+
+    <h2>JavaScript and Forms Demo</h2>
+    <h2>Animal Year Calculator</h2>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="first">First Name: </label></td>
+                <td><Input type="text" name="first" id="first" placeholder="Type firstName" required></Input></td>
+                
+            </tr>
+            <tr>
+                <td><label for="last">Last Name: </label></td>
+                <td><Input type="text" name="last" id="last" placeholder="Type lastName" required></Input></td>
+                
+            </tr>
+            <tr>
+                <td><label for="age">Age: </label></td>
+                <td><Input type="text" name="age" id="age" placeholder="Type age" required></Input></td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td><Input type="submit" value="Get Age!" id="get-age"></td>
+                
+            </tr>
+        </table>
+    </form>
+    <div id="display-info">
+        Your info will be displayed here:
+    </div>
+    <script src="animalcalculator.js"></script>
+</body>
+</html>
