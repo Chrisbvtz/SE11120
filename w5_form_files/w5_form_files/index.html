@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Christopher Batz">
+    <meta name="description" content="Default HTML Page for SE 111">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scripts/script.js">
+
+    <title>Week 5 | Tables and Forms</title>
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Party Registration Form</title>
+    <style>
+        table {
+            width: 600px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Birthday Party Registration Form</h1>
+
+<table>
+    <tr>
+        <th>Labels</th>
+        <th>Form Fields</th>
+    </tr>
+    <tr>
+        <td>Parent/Guardian Name</td>
+        <td>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+        </td>
+    </tr>
+    <tr>
+        <td>Child's First Name</td>
+        <td><input type="text" placeholder="Child's First Name"></td>
+    </tr>
+    <tr>
+        <td>Child's Age</td>
+        <td><input type="text" value="3"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><strong>Date and Time</strong></td>
+    </tr>
+    <tr>
+        <td>Date</td>
+        <td><input type="text" placeholder="mm/dd/yyyy"></td>
+    </tr>
+    <tr>
+        <td>Start Time</td>
+        <td><input type="text" placeholder="--:-- --"></td>
+    </tr>
+    <tr>
+        <td>Number of Guests</td>
+        <td><input type="text" value="5"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><strong>Food</strong></td>
+    </tr>
+    <tr>
+        <td>Size</td>
+        <td>
+            <input type="radio" name="size" value="sm"> sm
+            <input type="radio" name="size" value="med"> med
+            <input type="radio" name="size" value="lg"> lg
+        </td>
+    </tr>
+    <tr>
+        <td>Drinks</td>
+        <td>
+            <input type="checkbox" name="drink" value="coke" checked> Coke<br>
+            <input type="checkbox" name="drink" value="sprite"> Sprite<br>
+            <input type="checkbox" name="drink" value="fruit punch"> Fruit Punch<br>
+            <input type="checkbox" name="drink" value="lemonade"> Lemonade<br>
+            <input type="checkbox" name="drink" value="iced tea"> Iced Tea
+        </td>
+    </tr>
+    <tr>
+        <td>Cake</td>
+        <td>
+            <select name="cake">
+                <option value="chocolate">Chocolate</option>
+                <option value="Vanilla">Vanilla</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"><strong>Decorations</strong></td>
+    </tr>
+    <tr>
+        <td>Color Scheme</td>
+        <td><p>Choose your Color</p><input type="color" value="#00ff00"></td>
+    </tr>
+    <tr>
+        <td>Additional Comments</td>
+        <td><textarea placeholder="Please add any additional comments"></textarea></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button type="submit">Submit</button></td>
+    </tr>
+</table>
+</html>
