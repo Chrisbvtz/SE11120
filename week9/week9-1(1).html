@@ -3,9 +3,9 @@
 	<head>
 	<meta charset="utf-8">
 	<title>Week 2 Files</title>
-	<script src="week9.js"></script>
 	<style type="text/css">
 		.border{border:1px solid black;}
+		p{margin: 0;}
 		
 </style>
 </head>
@@ -13,7 +13,7 @@
 <body>
 	<script type="text/javascript">
 	//Use this Array of objects to complete the assignment.
-	var people = new Array()[
+	var people = [
 		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
 		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
 		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
@@ -24,10 +24,23 @@
 	]
 	var body = document.querySelector("body")
 
-	for (let i = 0; i <6;i++){
-		console.log(movies[i]);
+	for (let i = 0; i <people.length ;i++){
+		console.log(people[i]);
+		let tempdiv = document.createElement("div");
+		tempdiv.setAttribute("id",String(i));
+		tempdiv.setAttribute("style","border:1px solid black; border-bottom:none");
+		for (let person in people[i]){
+			let name = document.createElement("p");
+			let info = document.createTextNode(`${person}: ${people[i][person]}`);
+			name.append(info);
+			tempdiv.append(name);
 
-		page.innerHTML += `<p>${movies[i]}<p>`;
+		}
+		
+		if(i == people.length -1){
+			tempdiv.setAttribute("style","border:1px solid black;");
+		}
+		body.append(tempdiv);
 		}
 	
 </script>
