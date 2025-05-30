@@ -27,16 +27,30 @@
 			</tr>
 		</table>
 	<div>
-	<div id="output">
-	
-	</div>
+	<div id="output"></div>
 
 	<!--The script tag should go after the HMTL, but inside of the body.-->
 	<!--JavaScript cannot find tags, if they are not parsed before the script runs-->
     <script>
-	
-		// Add person to array
-		people.push(person);
+		let people = [];
+
+
+	    let firstName = document.getElementById("first");
+		let lastName = document.getElementById("last");
+		let button = document.getElementById("button");
+		let outputDiv = document.getElementById("output");
+
+    // Add click event listener to the button
+    button.addEventListener("click", function () {
+      // Create a person object from input values
+      let person = {
+        first: firstName.value.trim(),
+        last: lastName.value.trim()
+      };
+
+      // Add person to array
+      people.push(person);
+
 
 		// Sort array by last name (Bubble Sort)
 		for (let i = 0; i < people.length - 1; i++) {
@@ -63,13 +77,13 @@
 		}
 
 		// Display output
-		console.log(output);
+	
 		outputDiv.innerHTML = output;
 
 		// Optionally clear inputs
-		firstInput.value = "";
-		lastInput.value = "";
-	
+		firstName.value = "";
+		lastName.value = "";
+	});
     </script>
     
 </body>
