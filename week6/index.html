@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 6 | JavaScript Pay Calculator</title>
+</head>
+    <body>
+        <h1>Paycheck Calculator</h1>
+        <p>Calculator for your Salary!.</p>
+        <button>Calculate</button>
+
+        <script>
+            var firstName = "Chris"
+            var lastName = "Batz"
+            
+            var fullname = `${firstName} ${lastName}`;
+
+            console.log(fullname);
+
+            var promptButton = document.querySelector("button");
+
+            promptButton.addEventListener("click", dataPrompt);
+
+            function dataPrompt(){
+                let hourlyPay = prompt("Enter your hourly pay");
+                let hourWorked = prompt("How many hours did your work this week?");
+                let taxRate = prompt("Enter your tax rate");
+                let totalHours = hourWorked * 2;
+                let grossPay = hourlyPay * totalHours;
+
+                let result = Number(hourlyPay) * Number(hourWorked);
+
+                let documentBody = document.querySelector("body");
+                var outputElement = document.createElement("p");
+
+                var outputData = `<br> your income is $${result}`;
+
+                var outputHTML =  `Your income is $${result}`;
+
+
+                console.log(outputHTML)
+                outputElement.innerHTML = outputHTML;
+                documentBody.appendChild(outputElement);
+                
+
+                
+            }
+        </script>
+    </body>
+</html>
